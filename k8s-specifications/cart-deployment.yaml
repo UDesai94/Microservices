@@ -49,3 +49,5 @@ spec:
           periodSeconds: 10
           grpc:
             port: 7070
+      imagePullSecrets:
+        - name: acr-secret
