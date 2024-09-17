@@ -50,3 +50,5 @@ spec:
           periodSeconds: 15
           grpc:
             port: 9555
+      imagePullSecrets:
+      - name: acr-secret
