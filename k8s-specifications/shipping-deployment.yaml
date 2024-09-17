@@ -19,13 +19,6 @@ spec:
         runAsUser: 1000
       containers:
       - name: server
-        securityContext:
-          allowPrivilegeEscalation: false
-          capabilities:
-            drop:
-              - ALL
-          privileged: false
-          readOnlyRootFilesystem: true
         image: gcr.io/google-samples/microservices-demo/shippingservice:v0.8.0
         ports:
         - containerPort: 50051
@@ -34,6 +27,13 @@ spec:
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+              - ALL
+          privileged: false
+          readOnlyRootFilesystem: true
         readinessProbe:
           periodSeconds: 5
           grpc:
@@ -48,3 +48,5 @@ spec:
           limits:
             cpu: 200m
             memory: 128Mi
+      imagePullSecrets:
+      - name: acr-secret
