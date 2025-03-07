@@ -72,8 +72,3 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
   - [Introduction to Service Management with Istio](https://www.youtube.com/watch?v=wCJrdKdD6UM&feature=youtu.be&t=586)
 - [Google Cloud Next'18 London – Keynote](https://youtu.be/nIq2pkNcfEI?t=3071)
   showing Stackdriver Incident Response Management
-
----
-
-This is not an official Google project.
-# check
